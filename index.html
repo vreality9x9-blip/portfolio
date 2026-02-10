@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Développeuse Full Stack</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Sarah.Jenselme</div>
+        <ul class="nav-links">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#about">À Propos</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-bg-mesh"></div>
+        <div class="hero-content">
+            <div class="text-content">
+                <div class="availability-badge anim-fade anim-1">
+                    <span class="pulse-dot"></span>
+                    Disponible immédiatement — Freelance & Temps plein
+                </div>
+                <span class="greeting anim-fade anim-2">👋 Bonjour, je suis</span>
+                <h1 class="anim-fade anim-2">Sarah <span class="highlight">Jenselme</span></h1>
+                <h2 class="anim-fade anim-3">Développeuse <span class="role-rotate">Full Stack</span> · Web3 · Backend
+                </h2>
+                <p class="anim-fade anim-4">De l'<strong>architecture microservices</strong> aux <strong>smart contracts
+                        Solidity</strong>,
+                    je conçois des solutions numériques robustes et scalables.
+                    J'ai collaboré avec des équipes produit dans la <strong>DeFi</strong>, la
+                    <strong>HealthTech</strong>
+                    et le <strong>SaaS B2B</strong>. <span class="text-gradient">Chaque projet est une mission.</span>
+                </p>
+                <div class="hero-specialties anim-fade anim-5">
+                    <span class="specialty-tag"><i class="fas fa-cubes"></i> DeFi & DEX</span>
+                    <span class="specialty-tag"><i class="fas fa-link"></i> Smart Contracts</span>
+                    <span class="specialty-tag"><i class="fas fa-server"></i> Microservices</span>
+                    <span class="specialty-tag"><i class="fas fa-cloud"></i> DevOps & CI/CD</span>
+                    <span class="specialty-tag"><i class="fas fa-mobile-alt"></i> Apps Mobile</span>
+                    <span class="specialty-tag"><i class="fas fa-palette"></i> UI/UX Design</span>
+                </div>
+                <div class="cta-buttons anim-fade anim-6">
+                    <a href="#projects" class="btn primary"><i class="fas fa-rocket"></i> Explorer mes projets</a>
+                    <a href="#contact" class="btn secondary"><i class="fas fa-paper-plane"></i> Démarrer un projet</a>
+                </div>
+            </div>
+            <div class="image-content anim-fade anim-3">
+                <div class="profile-glow"></div>
+                <div class="profile-frame">
+                    <img src="assets/profile.jpg" alt="Sarah Jenselme — Développeuse Full Stack">
+                </div>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number" data-target="48">0</span><span class="stat-plus">+</span>
+                <span class="stat-label">Projets Livrés</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="35">0</span><span class="stat-plus">+</span>
+                <span class="stat-label">Clients Satisfaits</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="10">0</span>
+                <span class="stat-label">Ans d'Expérience</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="100">0</span><span class="stat-plus">%</span>
+                <span class="stat-label">Taux de Satisfaction</span>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Mes Projets Récents</h2>
+            <div class="projects-grid">
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="card-image project-2" style="background-image: url('assets/project2.png');"></div>
+                    <div class="card-content">
+                        <h3>EcoTrack Dashboard</h3>
+                        <p>Tableau de bord de surveillance énergétique avec visualisation de données complexes en temps
+                            réel.</p>
+                        <div class="tech-stack">
+                            <span>Vue.js</span>
+                            <span>D3.js</span>
+                            <span>Firebase</span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="openModal(2)" class="project-link">Voir le projet <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="card-image project-3" style="background-image: url('assets/project3.png');"></div>
+                    <div class="card-content">
+                        <h3>HealthSync App</h3>
+                        <p>Application de télémédecine permettant la prise de rendez-vous et les consultations vidéo
+                            sécurisées.</p>
+                        <div class="tech-stack">
+                            <span>React Native</span>
+                            <span>WebRTC</span>
+                            <span>AWS</span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="openModal(3)" class="project-link">Voir le projet <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- NEW PROJECTS -->
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="card-image project-4" style="background-image: url('assets/project4.png');"></div>
+                    <div class="card-content">
+                        <h3>UrbanLiving</h3>
+                        <p>Plateforme immobilière nouvelle génération avec visites virtuelles et recherche
+                            cartographique
+                            intelligente.</p>
+                        <div class="tech-stack">
+                            <span>Next.js</span>
+                            <span>Mapbox</span>
+                            <span>Supabase</span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="openModal(4)" class="project-link">Voir le projet <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="card-image project-5" style="background-image: url('assets/project5.png');"></div>
+                    <div class="card-content">
+                        <h3>CryptoArt NFT</h3>
+                        <p>Marketplace décentralisée pour l'art numérique, optimisée pour réduire les frais de gaz et
+                            l'impact écologique.</p>
+                        <div class="tech-stack">
+                            <span>Solidity</span>
+                            <span>Web3.js</span>
+                            <span>React</span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="openModal(5)" class="project-link">Voir le projet <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="card-image project-6" style="background-image: url('assets/project6.png');"></div>
+                    <div class="card-content">
+                        <h3>GastroReserve</h3>
+                        <p>Application de réservation de tables pour la haute gastronomie avec gestion des expériences
+                            culinaires.</p>
+                        <div class="tech-stack">
+                            <span>Flutter</span>
+                            <span>Firebase</span>
+                            <span>Node.js</span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="openModal(6)" class="project-link">Voir le projet <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Project 7: NexSwap DEX -->
+                <div class="project-card">
+                    <div class="card-image project-7" style="background-image: url('assets/nexswap_main.png');"></div>
+                    <div class="card-content">
+                        <h3>NexSwap DEX</h3>
+                        <p>Exchange décentralisé avec AMM, pools de liquidité concentrée et farming de rendement
+                            multi-chain.</p>
+                        <div class="tech-stack">
+                            <span>Solidity</span>
+                            <span>Uniswap V3</span>
+                            <span>Hardhat</span>
+                            <span>The Graph</span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="openModal(7)" class="project-link">Voir le projet <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Project 8: ChainVault -->
+                <div class="project-card">
+                    <div class="card-image project-8" style="background-image: url('assets/chainvault_main.png');">
+                    </div>
+                    <div class="card-content">
+                        <h3>ChainVault</h3>
+                        <p>Wallet multi-chain non-custodial avec staking liquide, bridge cross-chain et galerie NFT
+                            intégrée.</p>
+                        <div class="tech-stack">
+                            <span>Web3.js</span>
+                            <span>WalletConnect</span>
+                            <span>Solana SDK</span>
+                            <span>Rust</span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="openModal(8)" class="project-link">Voir le projet <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Project 9: DataForge API -->
+                <div class="project-card">
+                    <div class="card-image project-9" style="background-image: url('assets/dataforge_main.png');"></div>
+                    <div class="card-content">
+                        <h3>DataForge API</h3>
+                        <p>Plateforme backend microservices haute performance gérant 10K+ req/s avec monitoring avancé.
+                        </p>
+                        <div class="tech-stack">
+                            <span>Go</span>
+                            <span>gRPC</span>
+                            <span>PostgreSQL</span>
+                            <span>Kafka</span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="openModal(9)" class="project-link">Voir le projet <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Project 10: CloudOps -->
+                <div class="project-card">
+                    <div class="card-image project-10" style="background-image: url('assets/cloudops_main.png');"></div>
+                    <div class="card-content">
+                        <h3>CloudOps</h3>
+                        <p>Infrastructure-as-code avec orchestration K8s multi-régions, CI/CD et monitoring temps réel.
+                            SLA 99.97%.</p>
+                        <div class="tech-stack">
+                            <span>Terraform</span>
+                            <span>Docker</span>
+                            <span>K8s</span>
+                            <span>Prometheus</span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="openModal(10)" class="project-link">Voir le projet <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">À Propos de Moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-lead">Ingénieure logiciel passionnée depuis <strong>plus de 10 ans</strong>,
+                        j'ai accompagné <strong>startups early-stage</strong>, <strong>scale-ups en
+                            hyper-croissance</strong>
+                        et <strong>grands groupes internationaux</strong> dans leurs défis techniques les plus
+                        ambitieux.</p>
+                    <p>Mon parcours m'a menée du développement <strong>d'applications web critiques</strong> à la
+                        conception
+                        de <strong>protocoles DeFi</strong> gérant des millions en TVL, en passant par l'optimisation
+                        d'<strong>API traitant 50K+ requêtes/seconde</strong>. Je crois qu'un code propre et bien
+                        architecturé
+                        est la fondation de tout produit qui dure.</p>
+                    <p class="about-philosophy"><em>"Je ne livre pas juste du code — je construis des solutions qui
+                            génèrent de la valeur."</em></p>
+                </div>
+
+                <!-- Services Grid -->
+                <h3 class="subsection-title"><i class="fas fa-briefcase"></i> Mes Services</h3>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-cubes"></i></div>
+                        <h4>Web3 & DeFi</h4>
+                        <p>Smart contracts, DEX, NFT marketplaces, tokens ERC-20/721, audits de sécurité et intégration
+                            wallet.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-server"></i></div>
+                        <h4>Backend Scalable</h4>
+                        <p>Architecture microservices, API REST/GraphQL/gRPC, bases de données distribuées et message
+                            queues.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h4>Frontend & Mobile</h4>
+                        <p>Applications React/Next.js/Vue.js responsives, apps mobiles React Native et Flutter.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                        <h4>DevOps & Cloud</h4>
+                        <p>Infrastructure Terraform, orchestration Kubernetes, pipelines CI/CD et monitoring
+                            Prometheus/Grafana.</p>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <h3 class="subsection-title"><i class="fas fa-code"></i> Stack Technique</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-link"></i> Web3 & Blockchain</h3>
+                        <div class="skill-tags">
+                            <span>Solidity</span>
+                            <span>Hardhat</span>
+                            <span>ethers.js</span>
+                            <span>Web3.js</span>
+                            <span>The Graph</span>
+                            <span>Rust</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-palette"></i> Frontend</h3>
+                        <div class="skill-tags">
+                            <span>React / Next.js</span>
+                            <span>Vue.js / Nuxt</span>
+                            <span>TypeScript</span>
+                            <span>Tailwind CSS</span>
+                            <span>Flutter</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-database"></i> Backend</h3>
+                        <div class="skill-tags">
+                            <span>Node.js</span>
+                            <span>Go</span>
+                            <span>Python</span>
+                            <span>PostgreSQL</span>
+                            <span>Redis</span>
+                            <span>Kafka</span>
+                            <span>GraphQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-cogs"></i> DevOps & Cloud</h3>
+                        <div class="skill-tags">
+                            <span>Docker</span>
+                            <span>Kubernetes</span>
+                            <span>Terraform</span>
+                            <span>AWS / GCP</span>
+                            <span>GitLab CI</span>
+                            <span>Prometheus</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Démarrez Votre Projet</h2>
+            <p class="contact-intro">Vous avez une idée ? Un projet DeFi, une application web ou une refonte backend
+                ?<br><strong>Je suis prête à relever le défi.</strong> Discutons-en !</p>
+            <div class="contact-wrapper">
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Nom</label>
+                            <input type="text" id="name" placeholder="Votre nom complet" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                            <input type="email" id="email" placeholder="votre@email.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="project-type"><i class="fas fa-folder-open"></i> Type de projet</label>
+                        <select id="project-type">
+                            <option value="">Sélectionnez le type de projet</option>
+                            <option value="web3">Web3 / DeFi / Smart Contract</option>
+                            <option value="webapp">Application Web / SaaS</option>
+                            <option value="backend">Backend / API / Microservices</option>
+                            <option value="mobile">Application Mobile</option>
+                            <option value="devops">DevOps / Infrastructure</option>
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message"><i class="fas fa-comment-dots"></i> Message</label>
+                        <textarea id="message" placeholder="Décrivez votre projet, vos besoins et vos objectifs..."
+                            rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary"><i class="fas fa-paper-plane"></i> Envoyer le
+                        message</button>
+                </form>
+                <div class="contact-info">
+                    <div class="contact-info-card">
+                        <h3><i class="fas fa-headset"></i> Parlons de votre projet</h3>
+                        <p>Réponse garantie sous 24h. Je suis disponible pour des missions freelance, des collaborations
+                            long terme ou du consulting ponctuel.</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <span class="info-label">Email</span>
+                            <span class="info-value">contact@sarahjenselme.dev</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <span class="info-label">Localisation</span>
+                            <span class="info-value">Paris, France — Remote worldwide</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <span class="info-label">Disponibilité</span>
+                            <span class="info-value">Immédiate — Temps plein ou partiel</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 - Sarah Jenselme. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Project Detail Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <!-- Dynamic Content Loaded via JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

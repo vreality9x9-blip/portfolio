@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GastroReserve Demo</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            gap: 30px;
+        }
+
+        .phone {
+            width: 390px;
+            height: 844px;
+            background: #111;
+            border-radius: 40px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+            border: 8px solid #1a1a1a;
+            position: relative;
+        }
+
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 24px 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #c9a96e;
+        }
+
+        .app-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+        }
+
+        .app-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: #c9a96e;
+        }
+
+        .menu-icon {
+            font-size: 20px;
+        }
+
+        .featured {
+            padding: 0 24px;
+            margin-bottom: 24px;
+        }
+
+        .featured-img {
+            height: 220px;
+            background: linear-gradient(135deg, #2a1f10, #4a3520);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .featured-img::before {
+            content: '🍽️';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+            font-size: 60px;
+            opacity: 0.3;
+        }
+
+        .featured-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #fff;
+            z-index: 2;
+        }
+
+        .featured-cuisine {
+            font-size: 13px;
+            color: #c9a96e;
+            z-index: 2;
+            margin-top: 4px;
+        }
+
+        .featured-rating {
+            font-size: 13px;
+            color: #fff;
+            z-index: 2;
+            margin-top: 6px;
+        }
+
+        .dots {
+            display: flex;
+            gap: 6px;
+            margin-top: 12px;
+            z-index: 2;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #444;
+        }
+
+        .dot.active {
+            background: #c9a96e;
+            width: 24px;
+            border-radius: 4px;
+        }
+
+        .section-label {
+            padding: 0 24px;
+            font-weight: 700;
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 14px;
+        }
+
+        .restaurants {
+            padding: 0 24px;
+        }
+
+        .resto-card {
+            display: flex;
+            gap: 14px;
+            background: #1a1a1a;
+            border-radius: 14px;
+            padding: 14px;
+            margin-bottom: 12px;
+            animation: slideIn 0.5s ease-out both;
+        }
+
+        .resto-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            flex-shrink: 0;
+        }
+
+        .resto-card:nth-child(1) .resto-img {
+            background: linear-gradient(135deg, #2a1510, #4a2520);
+        }
+
+        .resto-card:nth-child(2) .resto-img {
+            background: linear-gradient(135deg, #102a15, #204a25);
+        }
+
+        .resto-card:nth-child(3) .resto-img {
+            background: linear-gradient(135deg, #10152a, #202540);
+        }
+
+        .resto-info h3 {
+            font-size: 15px;
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .resto-info p {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 4px;
+        }
+
+        .resto-info .stars {
+            color: #c9a96e;
+            font-size: 12px;
+        }
+
+        .resto-price {
+            color: #c9a96e;
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        .reserve-btn {
+            position: absolute;
+            bottom: 80px;
+            left: 24px;
+            right: 24px;
+            padding: 16px;
+            background: #c9a96e;
+            color: #111;
+            text-align: center;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .bottom-nav {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-around;
+            padding: 14px 20px;
+            background: #111;
+            border-top: 1px solid #222;
+        }
+
+        .nav-item {
+            text-align: center;
+            font-size: 10px;
+            color: #666;
+        }
+
+        .nav-item.active {
+            color: #c9a96e;
+        }
+
+        .nav-item .icon {
+            font-size: 20px;
+            margin-bottom: 2px;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="phone">
+        <div class="status-bar"><span>9:41</span><span>📶 🔋</span></div>
+        <div class="app-header">
+            <div class="app-logo">GastroReserve</div>
+            <div class="menu-icon">🔍</div>
+        </div>
+        <div class="featured">
+            <div class="featured-img">
+                <div class="featured-name">Le Grand Véfour</div>
+                <div class="featured-cuisine">Gastronomie Française</div>
+                <div class="featured-rating">⭐⭐⭐ Michelin · 4.9 ★</div>
+                <div class="dots">
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+        <div class="section-label">Restaurants Populaires</div>
+        <div class="restaurants">
+            <div class="resto-card" style="animation-delay:0.2s">
+                <div class="resto-img">🥩</div>
+                <div class="resto-info">
+                    <h3>L'Atelier de Joël Robuchon</h3>
+                    <p>Cuisine contemporaine · Paris 7e</p>
+                    <div class="stars">⭐⭐ Michelin · 4.8 ★</div>
+                    <div class="resto-price">€€€€</div>
+                </div>
+            </div>
+            <div class="resto-card" style="animation-delay:0.4s">
+                <div class="resto-img">🍣</div>
+                <div class="resto-info">
+                    <h3>Sushi Jin</h3>
+                    <p>Omakase japonais · Paris 2e</p>
+                    <div class="stars">⭐ Michelin · 4.7 ★</div>
+                    <div class="resto-price">€€€</div>
+                </div>
+            </div>
+            <div class="resto-card" style="animation-delay:0.6s">
+                <div class="resto-img">🍝</div>
+                <div class="resto-info">
+                    <h3>Ober Mamma</h3>
+                    <p>Italien · Paris 11e</p>
+                    <div class="stars">4.6 ★ · 2300 avis</div>
+                    <div class="resto-price">€€</div>
+                </div>
+            </div>
+        </div>
+        <div class="reserve-btn">Réserver une table</div>
+        <div class="bottom-nav">
+            <div class="nav-item active">
+                <div class="icon">🏠</div>Accueil
+            </div>
+            <div class="nav-item">
+                <div class="icon">🔍</div>Explorer
+            </div>
+            <div class="nav-item">
+                <div class="icon">📅</div>Réserver
+            </div>
+            <div class="nav-item">
+                <div class="icon">👤</div>Profil
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

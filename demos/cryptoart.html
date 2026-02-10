@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoArt Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: #0a0a14;
+            color: #fff;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: rgba(10, 10, 20, 0.9);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(168, 85, 247, 0.15);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .wallet-btn {
+            padding: 12px 28px;
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+            border: none;
+            color: #fff;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .hero {
+            padding: 80px 40px 40px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #fff, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            color: #888;
+            font-size: 18px;
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin: 30px 0;
+        }
+
+        .stat-val {
+            font-size: 32px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-lbl {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nft-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px 40px 60px;
+        }
+
+        .nft-card {
+            background: #12121f;
+            border: 1px solid #1a1a2e;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s;
+            cursor: pointer;
+            animation: fadeUp 0.6s ease-out both;
+        }
+
+        .nft-card:hover {
+            border-color: #a855f7;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(168, 85, 247, 0.15);
+        }
+
+        .nft-img {
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+        }
+
+        .nft-card:nth-child(1) .nft-img {
+            background: linear-gradient(135deg, #1a0533, #4a1578);
+        }
+
+        .nft-card:nth-child(2) .nft-img {
+            background: linear-gradient(135deg, #0c1833, #1e3a6e);
+        }
+
+        .nft-card:nth-child(3) .nft-img {
+            background: linear-gradient(135deg, #330a2e, #6e1d5e);
+        }
+
+        .nft-card:nth-child(4) .nft-img {
+            background: linear-gradient(135deg, #0a332e, #1d6e5e);
+        }
+
+        .nft-info {
+            padding: 16px;
+        }
+
+        .nft-name {
+            font-weight: 700;
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        .nft-artist {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 8px;
+        }
+
+        .nft-price {
+            font-weight: 700;
+            color: #a855f7;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">CryptoArt</div><button class="wallet-btn">🦊 Connecter Wallet</button>
+    </nav>
+    <div class="hero">
+        <h1>L'art Digital Redéfini</h1>
+        <p>Découvrez, collectionnez et vendez des NFTs extraordinaires</p>
+        <div class="stats-row">
+            <div>
+                <div class="stat-val">8.2K</div>
+                <div class="stat-lbl">Artistes</div>
+            </div>
+            <div>
+                <div class="stat-val">52K</div>
+                <div class="stat-lbl">NFTs</div>
+            </div>
+            <div>
+                <div class="stat-val">€4.8M</div>
+                <div class="stat-lbl">Volume</div>
+            </div>
+        </div>
+    </div>
+    <div class="nft-grid">
+        <div class="nft-card" style="animation-delay:0.1s">
+            <div class="nft-img">🎨</div>
+            <div class="nft-info">
+                <div class="nft-name">Cosmic Dreams #42</div>
+                <div class="nft-artist">@stellarArt</div>
+                <div class="nft-price">Ξ 2.4</div>
+            </div>
+        </div>
+        <div class="nft-card" style="animation-delay:0.2s">
+            <div class="nft-img">🌌</div>
+            <div class="nft-info">
+                <div class="nft-name">Nebula Vision</div>
+                <div class="nft-artist">@pixelMaster</div>
+                <div class="nft-price">Ξ 1.8</div>
+            </div>
+        </div>
+        <div class="nft-card" style="animation-delay:0.3s">
+            <div class="nft-img">💎</div>
+            <div class="nft-info">
+                <div class="nft-name">Digital Genesis</div>
+                <div class="nft-artist">@cryptoVision</div>
+                <div class="nft-price">Ξ 3.1</div>
+            </div>
+        </div>
+        <div class="nft-card" style="animation-delay:0.4s">
+            <div class="nft-img">🔮</div>
+            <div class="nft-info">
+                <div class="nft-name">Meta Portal #7</div>
+                <div class="nft-artist">@futureArt</div>
+                <div class="nft-price">Ξ 5.0</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
