@@ -1,0 +1,84 @@
+                <!-- Project 1: DataForge API -->
+                <div class="project-card">
+                    <div class="card-image project-1" style="background-image: url('assets/dataforge_main.png');"></div>
+                    <div class="card-content">
+                        <div class="card-category">Backend System</div>
+                        <h3>DataForge API</h3>
+                        <div class="tech-stack">
+                            <span>Go</span><span>gRPC</span><span>Kafka</span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="openModal(1)" class="project-link">Voir le projet <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 2: UrbanLiving -->
+                <div class="project-card">
+                    <div class="card-image project-2" style="background-image: url('assets/project4.png');"></div>
+                    <div class="card-content">
+                        <div class="card-category">Immobilier</div>
+                        <h3>UrbanLiving</h3>
+                        <div class="tech-stack">
+                            <span>Next.js</span><span>Mapbox</span><span>Supabase</span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="openModal(2)" class="project-link">Voir le projet <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 3: NexSwap DEX -->
+                <div class="project-card">
+                    <div class="card-image project-3" style="background-image: url('assets/nexswap_main.png');"></div>
+                    <div class="card-content">
+                        <div class="card-category">Web3 / DeFi</div>
+                        <h3>NexSwap DEX</h3>
+                        <div class="tech-stack">
+                            <span>Solidity</span><span>Uniswap V3</span><span>The Graph</span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="openModal(3)" class="project-link">Voir le projet <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 4: CloudOps -->
+                <div class="project-card">
+                    <div class="card-image project-4" style="background-image: url('assets/cloudops_main.png');"></div>
+                    <div class="card-content">
+                        <div class="card-category">DevOps / SRE</div>
+                        <h3>CloudOps</h3>
+                        <div class="tech-stack">
+                            <span>Terraform</span><span>K8s</span><span>Prometheus</span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="openModal(4)" class="project-link">Voir le projet <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 5: ChainVault -->
+                <div class="project-card">
+                    <div class="card-image project-5" style="background-image: url('assets/chainvault_main.png');">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-category">Web3 / Wallet</div>
+                        <h3>ChainVault</h3>
+                        <div class="tech-stack">
+                            <span>React Native</span><span>Web3.js</span><span>Rust</span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="openModal(5)" class="project-link">Voir le projet <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 6: EcoTrack -->
+                <div class="project-card">
+                    <div class="card-image project-6" style="background-image: url('assets/project2.png');"></div>
+                    <div class="card-content">
+                        <div class="card-category">Analytics</div>
+                        <h3>EcoTrack</h3>
+                        <div class="tech-stack">
+                            <span>Vue.js</span><span>D3.js</span><span>Firebase</span>
+                        </div>
+                        <a href="javascript:void(0)" onclick="openModal(6)" class="project-link">Voir le projet <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
